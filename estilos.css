@@ -1,0 +1,165 @@
+@charset "utf-8";
+/* CSS Document */
+
+body{
+	margin: 0;
+	background-color:#EEE;
+}
+
+#geral {
+	width: 950px;
+	margin: 0 auto;
+	background-color: #FFF;
+}
+#topo {
+	width: 950px;
+	border-bottom-width: 4px;
+	border-bottom-style: solid;
+	border-bottom-color: #F60;
+}
+#meio {
+	width: 950px;
+	overflow: hidden;
+}
+#coluna-meio {
+	
+	float: left;
+	width: 720px;
+	margin-bottom: 15px;
+}
+#coluna-lateral {
+
+	float: left;
+	width: 200px;
+	height:200px;
+	border-right-color:#F60;
+	border-right-width: 2px;
+	border-right-style: solid;
+	border-bottom-width: 2px;
+	border-bottom-style: solid;
+	border-bottom-color: #F60;
+}
+#coluna-lateral-linha {
+	float: left;
+	width: 4px;
+	background:#F60;
+	height:600px;
+	
+	
+}
+#rodape {
+	width: 910px;
+	border-top-width: 1px;
+	border-top-style: solid;
+	border-top-color: #333;
+	padding: 10px;
+	margin-right: 10px;
+	margin-bottom: 10px;
+	margin-left: 10px;
+}
+
+.noticia-foto {
+	float: left;
+	width: 240px;
+	margin: 10px;
+	border: 1px solid #999;
+	padding: 4px;
+}
+
+.lateral-titulo {
+	margin: 10px;
+	width: 190px;
+	border-bottom-width: 10px;
+	border-bottom-style: solid;
+	border-bottom-color: #F60;
+}
+
+.lateral-texto {
+	width: 190px;
+	margin-right: 10px;
+	margin-bottom: 10px;
+	margin-left: 10px;
+	padding: 10px;
+}
+.lateral-anuncio {
+	width: 180px;
+	margin-right: 10px;
+	margin-bottom: 10px;
+	margin-left: 10px;
+	background-color: #EEEEEE;
+}
+.meio-titulo {
+	margin: 10px;
+	width: 700px;
+	border-bottom-width: 10px;
+	border-bottom-style: solid;
+	border-bottom-color: #F60;
+}
+.noticias {
+	width: 700px;
+	margin-bottom: 10px;
+}
+.destaque1 {
+	width: 700px;
+	margin-bottom: 10px;
+}
+.destaque-titulo {
+	width: 345px;
+	margin-bottom: 10px;
+	border-bottom-width: 10px;
+	border-bottom-style: solid;
+	border-bottom-color: #F60;
+}
+.destaque2 {
+	width: 345px;
+	margin-right: 10px;
+	float: left;
+}
+.destaque3 {
+	width: 345px;
+	float: right;
+}
+
+.meio-texto {
+	width: 700px;
+	margin-right: 10px;
+	margin-bottom: 10px;
+	margin-left: 10px;
+}
+
+.veja-tambem {
+	width: 680px;
+	padding: 10px;
+}
+.texto1 {
+	width:350px;
+	float: left;
+	margin-left: 10px;
+	}
+.enviar{
+	background-image:url("img/votar.gif");
+	width:53px;
+	height:24px;
+	}
+.btComentario{
+	background-image:url("img/comentario.gif");
+	width:154px;
+	height:24px;
+
+	}
+.mural{
+	background-image:url("img/mural.gif");
+	width:125px;
+	height:23px;
+
+	}
+#link {
+	background-image:url("img/link.gif");
+	width:84px;
+	}
+.comentarios{
+width:700px;
+}
+.atualizarcadastro{
+width:720px;
+}

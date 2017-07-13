@@ -1,0 +1,52 @@
+#!C:\\Python26\\python.exe
+#-*- coding: ISO-8859-1 -*-
+import cgi, os
+import cgitb; cgitb.enable()
+import MySQLdb
+con = MySQLdb.connect('localhost', 'root', '123') # faz a conexao
+con.select_db('pythonweb')# seleciona o banco de dados
+cursor = con.cursor()#prepara um objeto cursor
+
+form = cgi.FieldStorage()
+
+# Get filename here.
+fileitem = form['file']
+nome = form.getvalue("nome")
+mail = form.getvalue("mail")
+user = form.getvalue("username")
+senha = form.getvalue("senha")
+ano = form.getvalue("ano")
+modelo = form.getvalue("modelo")
+
+foto = ""
+# Test if the file was uploaded
+if fileitem.filename:
+
+   fn = os.path.basename(fileitem.filename)
+   foto = user+fn
+   open('../choosecar/fotos/'+user+fn, 'wb').write(fileitem.file.read())
+
+   message = fn
+else:
+   message = "oi"
+sql = "INSERT INTO user(nome,mail,user,senha,ano,modelo,foto) VALUES (%s, %s, %s, %s, %s, %s, %s,)" % (nome, mail, user, senha, ano, modelo, foto)
+try:
+	cursor.execute(sql)
+	Results = cursor.fetchall()
+	total = len(Results)
+	if (total>0):
+		print "<pre>%s</pre></body></html>" %(total)
+	else:	
+		print "<pre>Senha errada! Não foi possivel o Login, você será redirecionado... <meta http-equiv='refresh' content='2;URL=user.py'></pre></body></html>"
+except MySQLdb.Error, e:
+    print "<pre>%s</pre></body></html>" % e
+    exit(1)
+
+print '''\
+Content-Type: text/html\n
+<html>
+<body>
+   <p>%s</p>
+</body>
+</html>
+'''% (message)
